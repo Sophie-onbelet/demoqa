@@ -1,0 +1,20 @@
+{
+    "NCR":[
+       "Delhi",
+       "Gurgaon",
+       "Noida"
+    ],
+    "Uttar Pradesh":[
+       "Agra",
+       "Lucjnow",
+       "Merrut"
+    ],
+    "Haryana":[
+       "Karnal",
+       "Panipat"
+    ],
+    "Rajasthan":[
+       "Jaipur",
+       "Jaiselmer"
+    ]
+ }
