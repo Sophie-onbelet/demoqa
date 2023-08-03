@@ -1,4 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+
+// Read from default ".env" file.
+dotenv.config();
 
 /**
  * Read environment variables from file.
@@ -14,7 +18,7 @@ export default defineConfig({
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: !!process.env.CI,
+  forbidOnly: true,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
@@ -28,7 +32,10 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-
+    video: {
+      mode: 'on', //off, on, retain-on-failure, on-first-retry
+      size: { width: 1920, height: 1080 },
+    },
   },
 
   /* Configure projects for major browsers */
