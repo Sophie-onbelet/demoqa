@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import reqresUser from '../jsons/reqres/user.json';
 import reqresResource from '../jsons/reqres/resources.json';
-import { User, Color, CreateUser } from '/models/formpage/api/Interfaces.ts';
+import { User, Color, CreateUser } from '../models/api/Interfaces';
 
 test.describe("Sophie's tests over reqres endpoints @Sophie @API", () => {
   test('Get user from endpoint @Positive', async ({ request }) => {
