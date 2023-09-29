@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { AccountAPI } from '../../models/api/demoqa/bookstore/AccountAPI';
-import { Account } from '../../models/demoqa/bookstore/Account';
 import { BookAPI } from '../../models/api/demoqa/bookstore/BookAPI';
+import { Account } from '../../models/bookstore/demoqa/bookstore/Account';
 
 test('Add a book to a user @API @Positive', async ({}) => {
   const userBearerToken = await AccountAPI.getUserToken(new Account('TonyBobonie', 'Perro123!'));

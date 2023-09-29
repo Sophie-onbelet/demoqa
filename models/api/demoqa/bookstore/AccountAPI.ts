@@ -1,5 +1,6 @@
 import * as pw from '@playwright/test';
-import { Account } from '../../../demoqa/bookstore/Account';
+import { Account } from '../../../bookstore/demoqa/bookstore/Account';
+
 
 export class AccountAPI {
   static async getUserToken(account: Account): Promise<string> {
