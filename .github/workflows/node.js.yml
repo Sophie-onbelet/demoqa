@@ -12,6 +12,7 @@ on:
 
 jobs:
   build:
+    environment: cisecret
 
     runs-on: ubuntu-latest
 
