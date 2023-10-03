@@ -1,7 +1,4 @@
-env:
-  TESTING_USERNAME: 'tomsmith'
-  USER_PASSWORD: 'SuperSecretPassword!'
-  
+
 name: Node.js CI
 
 on:
@@ -27,6 +24,10 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
+        TESTING_USERNAME: ${{ secrets.TESTING_USERNAME }}
+        USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+        API_URL: ${{ secrets.API_URL }}
+        REQRES_API: ${{ secrets.REQRES_API }}
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
