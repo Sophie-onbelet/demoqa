@@ -24,6 +24,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
+      env:
+        TESTING_USERNAME: ${{ secrets.TESTING_USERNAME }}
+        USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
